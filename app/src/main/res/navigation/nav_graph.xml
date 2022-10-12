@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ni.edu.uca.navblancarosales.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/menu_fragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_mayor_menor_fragment"
+            app:destination="@id/tablaMultiplicarFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_mediaAritmeticaFragment"
+            app:destination="@id/mediaAritmeticaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ni.edu.uca.navblancarosales.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+
+</navigation>
